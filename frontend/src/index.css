@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+	font-family: 'Montserrat', sans-serif;
+}
+/* src/index.css */
+
+/* Stylowanie scrolla dla WebKit */
+.custom-scrollbar::-webkit-scrollbar {
+	width: 8px; /* Szerokość scrolla */
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+	background-color: #4b5563; /* Ciemny kolor paska */
+	border-radius: 4px; /* Zaokrąglony pasek */
+	border: 2px solid #2d3748; /* Ciemniejszy brzeg paska */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+	background-color: #2d3748; /* Ciemne tło toru scrolla */
+	border-radius: 4px; /* Zaokrąglony tor */
+}
+
+body {
+	margin: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
