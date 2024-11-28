@@ -1,6 +1,17 @@
 const { Client } = require('pg');
-const config = require('./config');
+require('dotenv').config();
 
+const config = {
+	user: process.env.DB_USER,
+	password: process.env.DB_PASS,
+	host: process.env.DB_HOST,
+	port: 15131,
+	database: process.env.DB,
+	ssl: {
+		rejectUnauthorized: true,
+		ca: process.env.DB_CA,
+	},
+};
 const insertReservation = async (data) => {
 	const client = new Client(config);
 
